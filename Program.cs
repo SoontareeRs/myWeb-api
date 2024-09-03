@@ -5,6 +5,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configure Kestrel server options
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(80); // Listen on port 80 for HTTP traffic
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
