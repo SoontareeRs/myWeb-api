@@ -1,5 +1,5 @@
 # ใช้ภาพฐานของ .NET SDK
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # ตั้งค่าตำแหน่งทำงานใน container
 WORKDIR /app
