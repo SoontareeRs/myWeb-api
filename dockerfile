@@ -21,4 +21,4 @@ COPY --from=build /app/out .
 EXPOSE 80
 
 # สั่งให้รันแอปพลิเคชัน
-ENTRYPOINT ["dotnet", "myWebAPI.dll"]
+ENTRYPOINT ["dotnet", "MyWebAPI.dll"]
