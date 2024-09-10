@@ -1,4 +1,4 @@
-# ใช้ภาพฐานของ .NET SDK 8.0
+# ใช้ image baseของ .NET SDK 8.0
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # ตั้งค่าตำแหน่งทำงานใน container
