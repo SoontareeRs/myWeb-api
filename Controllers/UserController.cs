@@ -35,4 +35,15 @@ public class UserController : ControllerBase
         return Ok(await _userService.GetUserById(id));
     }
 
+    [HttpPatch("{id}")]
+    public async Task<IActionResult> UpdateUser(int id, User user){
+        return Ok(await _userService.UpdateUserAsync(id, user));
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteUser(int id)
+    {
+        return Ok(await _userService.DeleteUserAsync(id));
+    }
+   
 }
