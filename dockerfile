@@ -12,7 +12,7 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet build -c Release -o out
 
-# สร้างภาพสำหรับการรัน
+# สร้าง image สำหรับการรัน
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out .
