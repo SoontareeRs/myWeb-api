@@ -9,5 +9,7 @@ public class User
     public required string Email { get; set; }
     public required string PhoneNumber { get; set; }
     public required string Role { get; set; }
-
+    public bool IsDeleted { get; set; }
+    public DateTime CreatedAt { get; set; } 
+    public DateTime UpdatedAt { get; set; } 
 }
