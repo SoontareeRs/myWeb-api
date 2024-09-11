@@ -28,4 +28,13 @@ public class UserService : IUserService
         return user;
     }
 
+    public async Task<User> UpdateUserAsync(int id, User user){
+        return await _userRepository.UpdateUserAsync(id, user);
+    }
+
+    public async Task<bool> DeleteUserAsync(int id)
+    {
+        return await _userRepository.DeleteUserAsync(id);
+    }
+
 }
