@@ -14,7 +14,7 @@ services:
     image: mywebapi
     container_name: assingmentAPI
     ports:
-      - "80:80"
+      - "80:80" #- "8080:80"  # Map host port 8080 to container port 80
     depends_on:
       - mysql
     networks:
