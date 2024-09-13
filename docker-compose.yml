@@ -10,23 +10,19 @@ services:
   #   networks:
   #     - my-network
 
-  mssql-server:
-    image: mysql:8.0
-    ports:
-      - "1433:1433"
-    environment:
-      SA_PASSWORD: "tnt@odds"
-
   my-dotnet-app:
     image: mywebapi
     container_name: assingmentAPI
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80:80" 
+    command: dotnet ef database update
     depends_on:
       - mysql
     networks:
       - my-network
 
-networks:
-  my-network:
-    driver: bridge
+# networks:
+#   my-network:
+#     driver: bridge
