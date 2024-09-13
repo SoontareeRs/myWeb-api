@@ -7,6 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: password
     ports:
       - "3306:3306"
+      - ConnectionStrings__DefaultConnection="Server=mysql;Port=3306;Database=Users;User=root;Password=password;"
     networks:
       - my-network
 
@@ -19,6 +20,9 @@ services:
       - mysql
     networks:
       - my-network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection="Server=13.237.137.147;Port=3306;Database=Users;User=tnt;Password=tnt@odds;"
 
 networks:
   my-network:

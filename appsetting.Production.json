@@ -1,0 +1,12 @@
+{
+    "Logging": {
+      "LogLevel": {
+        "Default": "Warning",
+        "Microsoft.AspNetCore": "Error"
+      }
+    },
+    "ConnectionStrings": {
+      "DefaultConnection": "Server=production-db-server;Port=3306;Database=Users;User=prod_user;Password=prod_password;"
+    }
+  }
+  
