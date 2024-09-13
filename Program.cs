@@ -11,8 +11,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // builder.Services.AddDbContext<UserDbContext>(option => 
 //     option.UseMySql("Server=localhost;Port=3306;Database=Users;User=root;Password=password;", new MySqlServerVersion(new Version(8, 0, 29))));
+// 
+// builder.Services.AddDbContext<UserDbContext>(options =>
+//     options.UseMySql("Server=assignmentDB;Port=3306;Database=Users;User=root;Password=password;", new MySqlServerVersion(new Version(8, 0, 29))));
+
 builder.Services.AddDbContext<UserDbContext>(options =>
-    options.UseMySql("Server=assignmentDB;Port=3306;Database=Users;User=root;Password=password;", new MySqlServerVersion(new Version(8, 0, 29))));
+    options.UseMySql("Server=13.237.137.147;Port=3306;Database=Users_prod;User=tnt;Password=tnt@odds;", new MySqlServerVersion(new Version(8, 0, 29))));
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();

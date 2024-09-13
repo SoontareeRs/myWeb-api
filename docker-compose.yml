@@ -1,20 +1,27 @@
 version: '3.8'
 services:
-  mysql:
+  # mysql:
+  #   image: mysql:8.0
+  #   container_name: assingmentDB
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: password
+  #   ports:
+  #     - "3306:3306"
+  #   networks:
+  #     - my-network
+
+  mssql-server:
     image: mysql:8.0
-    container_name: assingmentDB
-    environment:
-      MYSQL_ROOT_PASSWORD: password
     ports:
-      - "3306:3306"
-    networks:
-      - my-network
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "tnt@odds"
 
   my-dotnet-app:
     image: mywebapi
     container_name: assingmentAPI
     ports:
-      - "80:80" #- "8080:80"  # Map host port 8080 to container port 80
+      - "80:80" 
     depends_on:
       - mysql
     networks:

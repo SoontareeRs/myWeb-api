@@ -16,7 +16,8 @@
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5245",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+          "DefaultConnection": "Data Source=13.237.137.147;Database=Users_prod;User=tnt;Password=tnt@odds;TrustServerCertificate=true;"
       }
     },
     "https": {
