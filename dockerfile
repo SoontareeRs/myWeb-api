@@ -1,10 +1,11 @@
+ 
+
 # ใช้ image base ของ .NET SDK 8.0
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # ตั้งค่าตำแหน่งทำงานใน container
 WORKDIR /app
-
-RUN --mount=type=secret,id=_env,dst=/etc/secrets/.env cp /etc/secrets/.env
+RUN --mount=type=secret,id=_env,dst=/etc/secrets/.env
 
 # คัดลอกไฟล์โปรเจกต์ไปยัง container
 COPY *.csproj ./
