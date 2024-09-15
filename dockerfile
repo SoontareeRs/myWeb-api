@@ -12,13 +12,18 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet build -c Release -o out
 
-# สร้าง image สำหรับการรัน
+# ตรวจสอบว่าไฟล์ build ถูกสร้างขึ้นหรือไม่
+RUN ls /app/out
+
+# ใช้ image base ของ ASP.NET สำหรับการรัน
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
+
+# คัดลอกผลลัพธ์จากขั้นตอน build มาที่ runtime container
 COPY --from=build /app/out .
 
-# เปิดพอร์ตที่ใช้
-EXPOSE 80
+# เปิดพอร์ตที่ใช้ใน container
+EXPOSE 5499
 
 # สั่งให้รันแอปพลิเคชัน
 ENTRYPOINT ["dotnet", "MyWebAPI.dll"]
