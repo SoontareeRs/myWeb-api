@@ -7,6 +7,8 @@ services:
     environment:
       - ASPNETCORE_URLS=http://+:5499  
       - ASPNETCORE_ENVIRONMENT=Development 
+      - ConnectionStrings__DefaultConnection=${DB_CONNECTION_STRING}
+
     ports:
       - "8080:5499"
 
