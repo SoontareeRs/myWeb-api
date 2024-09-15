@@ -11,4 +11,5 @@ services:
 
     ports:
       - "8080:5499"
+    command: dotnet ef database update
 
