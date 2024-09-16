@@ -1,5 +1,4 @@
-# myWeb-api
-# User Management API
+# MyWeb-API project is a user management API
 This project is a simple **User Management API** built using **ASP.NET Core**. The API allows you to perform **CRUD operations** on users, including creating, reading, updating, and deleting users.
 
 ## Features
@@ -8,6 +7,7 @@ This project is a simple **User Management API** built using **ASP.NET Core**. T
 - Retrieve user details
 - Update user information
 - Delete a user
+
 
 # How to Run the Project
 1. Clone this repository.
@@ -28,7 +28,8 @@ dotnet run
 ```
 5. Navigate to http://localhost:5245/swagger in your browser.
 
-## How to Create This Project
+
+# How to Create This Project
 1. Create a new ASP.NET Core Web Application project using Visual Studio or the command line:
 ```
 dotnet new webapi -o mywebapi
