@@ -1,12 +1,10 @@
-#การรันแบบไม่ต้องจำ command , docker-compose up --build
-version: '3.8'
 services:
   my-dotnet-app:
     image: mywebapi
+    build: ./
     container_name: assingmentAPI
     environment:
-      - ASPNETCORE_URLS=http://+:5499  
       - ASPNETCORE_ENVIRONMENT=Development 
     ports:
-      - "8080:5499"
+      - "8080:8080"
 
