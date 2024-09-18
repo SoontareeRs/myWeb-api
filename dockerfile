@@ -23,7 +23,7 @@ WORKDIR /app
 COPY --from=build /app/out .
 
 # เปิดพอร์ตที่ใช้ใน container
-EXPOSE 5245
+EXPOSE 8080
 
 # สั่งให้รันแอปพลิเคชัน
 ENTRYPOINT ["dotnet", "MyWebAPI.dll"]
